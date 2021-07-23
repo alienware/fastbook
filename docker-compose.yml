@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  jupyter:
+    build: .
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - shm-size=8G
+    ports:
+      - 8888:8888
+    volumes:
+      - .:/home/jovyan
+
